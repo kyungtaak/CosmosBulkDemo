@@ -5,7 +5,7 @@ Original MIT terms are preserved in [scripts/LICENSE.md](scripts/LICENSE.md).
 
 ## 리포 규칙
 
-시크릿을 커밋하지 않는다. 실제 키·리소스 식별자는 환경 변수와 예시 placeholder로 구분한다. 미커밋 변경과 저자의 실습 내용을 보존한다. 루트 README는 워크샵 진입점이며, 랩은 `labs/NN-kebab-name`으로 배치한다.
+시크릿을 커밋하지 않는다. 실제 키·리소스 식별자는 환경 변수와 예시 placeholder로 구분한다. 미커밋 변경과 저자의 실습 내용을 보존한다. 루트 README는 워크샵 진입점이며, 랩은 루트의 `NN-kebab-name`으로 배치한다.
 
 이 저장소는 C형 예외다. Markdown을 본문으로, 기존 .NET 프로그램을 검증 자료로 유지한다. 표준화를 위해 notebook을 추가하지 않는다. .NET 9와 기존 NuGet 패키지 버전을 보존한다.
 

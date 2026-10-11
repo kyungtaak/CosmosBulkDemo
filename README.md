@@ -36,15 +36,15 @@ original_content_date: 2025-10-25
 
 | 랩 | 내용 |
 |---|---|
-| [01. Cosmos DB 대량 처리](labs/01-cosmos-bulk-demo/README.md) | 환경 준비, Cosmos DB 생성, .NET 실행과 Portal 검증 |
+| [01. Cosmos DB 대량 처리](01-cosmos-bulk-demo/README.md) | 환경 준비, Cosmos DB 생성, .NET 실행과 Portal 검증 |
 
-[첫 랩 시작](labs/01-cosmos-bulk-demo/README.md)
+[첫 랩 시작](01-cosmos-bulk-demo/README.md)
 
 ## 실행 방법
 
 ### 로컬
 
-이 저장소를 VS Code에서 열고 [랩 안내서](labs/01-cosmos-bulk-demo/README.md)를 따릅니다. 기존 프로그램은 [프로젝트 파일](labs/01-cosmos-bulk-demo/src/CosmosBulkDemo.csproj)에 있으며, NuGet 패키지 버전은 원본과 같습니다.
+이 저장소를 VS Code에서 열고 [랩 안내서](01-cosmos-bulk-demo/README.md)를 따릅니다. 기존 프로그램은 [프로젝트 파일](01-cosmos-bulk-demo/src/CosmosBulkDemo.csproj)에 있으며, NuGet 패키지 버전은 원본과 같습니다.
 
 ### Codespaces와 Dev Container
 
@@ -58,7 +58,7 @@ Portal은 코드 실행 후 데이터와 TTL 설정을 확인하는 단계입니
 
 ## 검증
 
-[랩의 검증 절차](labs/01-cosmos-bulk-demo/README.md#검증)를 따릅니다. 자동 문서 검사는 [AGENTS.md](AGENTS.md)의 9종 명령을 사용하며 실제 클라우드 실습 완주를 대신하지 않습니다.
+[랩의 검증 절차](01-cosmos-bulk-demo/README.md#검증)를 따릅니다. 자동 문서 검사는 [AGENTS.md](AGENTS.md)의 9종 명령을 사용하며 실제 클라우드 실습 완주를 대신하지 않습니다.
 
 <!-- TODO: 사람이 최종 콘텐츠를 선언한 실행 환경에서 완주한 날짜만 validated_on에 기록한다. -->
 
@@ -68,7 +68,7 @@ Portal은 코드 실행 후 데이터와 TTL 설정을 확인하는 단계입니
 
 ## 트러블슈팅
 
-[랩 안내서](labs/01-cosmos-bulk-demo/README.md#트러블슈팅)의 실행 정책 안내를 확인합니다.
+[랩 안내서](01-cosmos-bulk-demo/README.md#트러블슈팅)의 실행 정책 안내를 확인합니다.
 
 ## 출처와 라이선스
 

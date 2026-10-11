@@ -12,7 +12,7 @@ last_updated: 2026-10-11
 
 ## 사전 요구사항
 
-로컬 .NET SDK, Azure CLI, PowerShell과 Azure 구독을 준비합니다. Codespaces에서는 [devcontainer](../../.devcontainer/devcontainer.json)를 사용합니다.
+로컬 .NET SDK, Azure CLI, PowerShell과 Azure 구독을 준비합니다. Codespaces에서는 [devcontainer](../.devcontainer/devcontainer.json)를 사용합니다.
 
 <!-- TODO: 저자가 필요한 권한, Azure 비용과 최종 실행 환경별 완주 절차를 확인한다. -->
 
@@ -29,9 +29,9 @@ last_updated: 2026-10-11
 기존 프로젝트는 [src](src)에 있습니다. 아래는 원본의 프로젝트 생성 명령이며, 경로만 표준 랩 위치로 변경했습니다.
 
 ```bash
-mkdir -p labs/01-cosmos-bulk-demo/src/Models
+mkdir -p 01-cosmos-bulk-demo/src/Models
 mkdir -p .vscode
-cd labs/01-cosmos-bulk-demo/src
+cd 01-cosmos-bulk-demo/src
 dotnet new console -n CosmosBulkDemo
 dotnet add package Microsoft.Azure.Cosmos --version 3.54.0
 dotnet add package Newtonsoft.Json --version 13.0.3
@@ -53,10 +53,10 @@ az account set --subscription "<구독 이름 또는 ID>"
 저장소 루트에서 [리소스 생성 스크립트](create-cosmosdb-demo.ps1)를 실행합니다.
 
 ```powershell
-.\labs\01-cosmos-bulk-demo\create-cosmosdb-demo.ps1
+.\01-cosmos-bulk-demo\create-cosmosdb-demo.ps1
 ```
 
-출력된 `COSMOS_ENDPOINT`와 `COSMOS_KEY`를 [appsettings.json](src/appsettings.json) 또는 [launch.json](../../.vscode/launch.json)에 입력합니다. 실제 값을 넣은 파일은 커밋하지 마세요.
+출력된 `COSMOS_ENDPOINT`와 `COSMOS_KEY`를 [appsettings.json](src/appsettings.json) 또는 [launch.json](../.vscode/launch.json)에 입력합니다. 실제 값을 넣은 파일은 커밋하지 마세요.
 
 <!-- TODO: 원본 스크립트의 primary key 콘솔 출력과 커밋되는 설정 파일의 실제 값 입력 안내를 검토하고 안전한 자격 증명 취급 절차를 확정한다. -->
 
@@ -65,7 +65,7 @@ az account set --subscription "<구독 이름 또는 ID>"
 저장소 루트에서 실행합니다.
 
 ```powershell
-cd labs/01-cosmos-bulk-demo/src
+cd 01-cosmos-bulk-demo/src
 dotnet clean
 dotnet build
 dotnet run
@@ -106,4 +106,4 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 ## 이전·다음
 
-[이전: 워크샵 홈](../../README.md) · [다음: 워크샵 홈](../../README.md)
+[이전: 워크샵 홈](../README.md) · [다음: 워크샵 홈](../README.md)

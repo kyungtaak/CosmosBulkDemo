@@ -18,7 +18,7 @@
   "remoteEnv": {
     "PATH": "${containerWorkspaceFolder}/.venv/container/bin:${containerEnv:PATH}"
   },
-  "postCreateCommand": "python3 -m venv .venv/container && .venv/container/bin/python -m pip install -r scripts/requirements-workshop.txt && dotnet restore labs/01-cosmos-bulk-demo/src/CosmosBulkDemo.csproj",
+  "postCreateCommand": "python3 -m venv .venv/container && .venv/container/bin/python -m pip install -r scripts/requirements-workshop.txt && dotnet restore 01-cosmos-bulk-demo/src/CosmosBulkDemo.csproj",
   "customizations": {
     "vscode": {
       "extensions": [

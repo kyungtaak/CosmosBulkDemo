@@ -5,9 +5,9 @@
       "name": ".NET Run (CosmosBulkDemo)",
       "type": "coreclr",
       "request": "launch",
-      "program": "${workspaceFolder}/labs/01-cosmos-bulk-demo/src/bin/Debug/net9.0/CosmosBulkDemo.dll",
+      "program": "${workspaceFolder}/01-cosmos-bulk-demo/src/bin/Debug/net9.0/CosmosBulkDemo.dll",
       "preLaunchTask": "build",
-      "cwd": "${workspaceFolder}/labs/01-cosmos-bulk-demo/src",
+      "cwd": "${workspaceFolder}/01-cosmos-bulk-demo/src",
       "env": {
         "COSMOS_ENDPOINT": "<COSMOS_DB_ENDPOINT>",
         "COSMOS_KEY": "<COSMOS_KEY>",

@@ -7,7 +7,7 @@
       "command": "dotnet",
       "args": [
         "build",
-        "${workspaceFolder}/labs/01-cosmos-bulk-demo/src/CosmosBulkDemo.csproj"
+        "${workspaceFolder}/01-cosmos-bulk-demo/src/CosmosBulkDemo.csproj"
       ],
       "problemMatcher": "$msCompile",
       "group": {
