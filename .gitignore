@@ -1,0 +1,12 @@
+bin/
+obj/
+.vscode/.react*
+.vscode/ipch
+*.user
+*.suo
+.DS_Store
+.venv/
+local-only/
+.env
+.env.*
+!.env.example

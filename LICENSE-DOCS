@@ -1,0 +1,17 @@
+# Documentation License
+
+Copyright (c) 2025-2026 Sehee Kim
+
+The original workshop documentation in `README.md` and
+`labs/01-cosmos-bulk-demo/README.md` is licensed under the
+[Creative Commons Attribution-ShareAlike 4.0 International license (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+The [official legal code](https://creativecommons.org/licenses/by-sa/4.0/legalcode) governs this license.
+
+Preserve the original attribution and license notices when reusing or adapting this material.
+This notice does not relicense third-party material; its existing notices and licenses remain applicable.
+
+The supplied checker and standardization template material retain their original
+Microsoft copyright and MIT terms in `scripts/LICENSE.md`. These terms are not
+replaced by the workshop's documentation license.
+
+Workshop software, configuration and PowerShell scripts are covered by the root MIT license.
