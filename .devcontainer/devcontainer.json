@@ -1,34 +1,21 @@
 {
   "name": "Cosmos DB Bulk Workshop",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
   "features": {
     "ghcr.io/devcontainers/features/dotnet:2": {
       "version": "9.0"
     },
     "ghcr.io/devcontainers/features/azure-cli:1": {},
-    "ghcr.io/devcontainers/features/powershell:2": {},
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "os-provided",
-      "installTools": false
-    }
+    "ghcr.io/devcontainers/features/powershell:2": {}
   },
   "remoteUser": "vscode",
-  "remoteEnv": {
-    "PATH": "${containerWorkspaceFolder}/.venv/container/bin:${containerEnv:PATH}"
-  },
-  "postCreateCommand": "python3 -m venv .venv/container && .venv/container/bin/python -m pip install -r scripts/requirements-workshop.txt && dotnet restore 01-cosmos-bulk-demo/src/CosmosBulkDemo.csproj",
+  "postCreateCommand": "dotnet restore 01-cosmos-bulk-demo/src/CosmosBulkDemo.csproj",
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-dotnettools.csharp",
-        "ms-vscode.powershell",
-        "ms-python.python"
-      ],
-      "settings": {
-        "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/container/bin/python"
-      }
+        "ms-vscode.powershell"
+      ]
     }
   }
 }

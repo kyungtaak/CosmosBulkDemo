@@ -92,7 +92,44 @@ az monitor metrics list `
 
 ## 정리 (Clean-up)
 
-<!-- TODO: 원본에 정리 절차가 없다. 생성 리소스와 삭제 범위, 비용 발생 중단 확인 방법을 저자가 작성한다. -->
+이 워크샵은 `rg-cosmos-demo`를 실습 전용 리소스 그룹으로 사용합니다. 실습이 끝나면 그룹 전체를 삭제해 Cosmos DB 계정과 데이터베이스, 컨테이너를 정리합니다. 생성 스크립트의 `$RG`를 변경했다면 아래 명령에도 같은 이름을 사용하세요.
+
+> **주의:** 그룹 안의 모든 리소스와 데이터가 삭제됩니다. 보존할 다른 리소스가 있는 그룹에는 이 절차를 적용하지 마세요.
+
+### 삭제 대상 확인
+
+생성할 때 사용한 구독이 선택되어 있는지 확인하고 삭제할 리소스 목록을 조회합니다.
+
+```powershell
+az account show --query "{subscription:name, id:id}" --output table
+if ($LASTEXITCODE -ne 0) { throw "구독 확인에 실패했습니다." }
+
+az resource list --resource-group "rg-cosmos-demo" --output table
+if ($LASTEXITCODE -ne 0) { throw "삭제 대상 조회에 실패했습니다." }
+```
+
+### 리소스 그룹 삭제
+
+위 목록에 실습 리소스만 있는지 확인한 뒤 실행합니다. CLI의 확인 메시지에서도 삭제할 그룹을 확인하세요.
+
+```powershell
+az group delete --name "rg-cosmos-demo"
+if ($LASTEXITCODE -ne 0) { throw "리소스 그룹 삭제가 완료되지 않았습니다." }
+```
+
+`--yes`로 확인을 생략하거나 `--no-wait`로 삭제 완료 전에 다음 단계로 넘어가지 않습니다.
+
+### 삭제 완료 확인
+
+```powershell
+$groupExists = az group exists --name "rg-cosmos-demo"
+if ($LASTEXITCODE -ne 0) { throw "리소스 그룹 삭제 상태 조회에 실패했습니다." }
+if ($groupExists -ne "false") { throw "리소스 그룹이 아직 존재합니다. 삭제 상태를 확인하세요." }
+```
+
+삭제가 완료되면 이 그룹의 리소스를 대상으로 한 프로그램 실행과 모니터링을 중단합니다. 삭제 전에 발생한 사용료는 남으며, 다른 그룹의 리소스와 별도로 실행한 Codespaces는 삭제되지 않습니다.
+
+명령의 옵션은 [Azure CLI 리소스 그룹 문서](https://learn.microsoft.com/cli/azure/group#az-group-delete)를 참고하세요.
 
 ## 트러블슈팅
 

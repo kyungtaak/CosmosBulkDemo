@@ -26,7 +26,7 @@ original_content_date: 2025-10-25
 
 .NET 9 SDK, Azure CLI, PowerShell과 Azure 구독이 필요합니다. 로컬 또는 Codespaces에서 코드를 실행하고 Azure Portal에서 데이터를 확인합니다.
 
-<!-- TODO: 저자가 필요한 Azure 권한, 비용과 리소스 정리 절차를 확인한다. -->
+<!-- TODO: 저자가 필요한 Azure 권한과 비용을 확인한다. -->
 
 ## 소요 시간
 
@@ -48,7 +48,7 @@ original_content_date: 2025-10-25
 
 ### Codespaces와 Dev Container
 
-[devcontainer 설정](.devcontainer/devcontainer.json)은 .NET 9, PowerShell, Azure CLI, Python과 gitleaks를 준비합니다. VS Code의 **Dev Containers: Reopen in Container** 명령으로 사용할 수 있습니다. 환경 생성 후 검사 의존성과 .NET 패키지를 설치하지만 Azure 로그인, 리소스 생성, 프로그램 실행은 자동으로 수행하지 않습니다.
+[devcontainer 설정](.devcontainer/devcontainer.json)은 .NET 9, PowerShell, Azure CLI를 준비합니다. VS Code의 **Dev Containers: Reopen in Container** 명령으로 사용할 수 있습니다. 환경 생성 후 .NET 패키지를 복원하지만 Azure 로그인, 리소스 생성, 프로그램 실행은 자동으로 수행하지 않습니다.
 
 <!-- TODO: 최종 devcontainer가 포함된 게시 브랜치와 실제 Codespaces 실행을 확인한 뒤 해당 브랜치를 가리키는 Open in Codespaces 배지를 추가한다. -->
 
@@ -58,13 +58,13 @@ Portal은 코드 실행 후 데이터와 TTL 설정을 확인하는 단계입니
 
 ## 검증
 
-[랩의 검증 절차](01-cosmos-bulk-demo/README.md#검증)를 따릅니다. 자동 문서 검사는 [AGENTS.md](AGENTS.md)의 9종 명령을 사용하며 실제 클라우드 실습 완주를 대신하지 않습니다.
+[랩의 검증 절차](01-cosmos-bulk-demo/README.md#검증)를 따릅니다.
 
 <!-- TODO: 사람이 최종 콘텐츠를 선언한 실행 환경에서 완주한 날짜만 validated_on에 기록한다. -->
 
 ## 정리 (Clean-up)
 
-<!-- TODO: 원본에 없는 리소스 삭제 절차와 비용 발생 중단 확인 방법을 저자가 작성한다. -->
+실습을 마치면 [랩의 정리 절차](01-cosmos-bulk-demo/README.md#정리-clean-up)에 따라 실습 전용 리소스 그룹을 삭제합니다. 그룹 안의 모든 리소스와 데이터가 삭제되므로 보존할 자료를 먼저 확인하세요.
 
 ## 트러블슈팅
 
@@ -74,4 +74,4 @@ Portal은 코드 실행 후 데이터와 TTL 설정을 확인하는 단계입니
 
 원본은 [kyungtaak/CosmosBulkDemo](https://github.com/kyungtaak/CosmosBulkDemo)입니다. 원본 코드와 실습 내용을 유지한 표준화 작업본입니다.
 
-워크샵 코드와 스크립트·설정은 [MIT 라이선스](LICENSE.md), 이 안내서와 랩 안내서는 [CC BY-SA 4.0](LICENSE-DOCS)을 적용합니다. 제공받은 검사기와 표준화 템플릿의 원래 Microsoft 저작권 고지는 [별도 MIT 고지](scripts/LICENSE.md)에 보존합니다. 이는 워크샵 자체의 Microsoft 소유권이나 지원 정책을 뜻하지 않습니다.
+워크샵 코드와 스크립트·설정은 [MIT 라이선스](LICENSE.md), 이 안내서와 랩 안내서는 [CC BY-SA 4.0](LICENSE-DOCS)을 적용합니다. 표준화 템플릿의 원래 Microsoft 저작권 고지는 [MIT 라이선스 문서](LICENSE.md#third-party-template-material)에 함께 보존합니다. 이는 워크샵 자체의 Microsoft 소유권이나 지원 정책을 뜻하지 않습니다.

@@ -10,8 +10,8 @@ The [official legal code](https://creativecommons.org/licenses/by-sa/4.0/legalco
 Preserve the original attribution and license notices when reusing or adapting this material.
 This notice does not relicense third-party material; its existing notices and licenses remain applicable.
 
-The supplied checker and standardization template material retain their original
-Microsoft copyright and MIT terms in `scripts/LICENSE.md`. These terms are not
+Standardization template material retains its original
+Microsoft copyright and MIT terms in `LICENSE.md`. These terms are not
 replaced by the workshop's documentation license.
 
 Workshop software, configuration and PowerShell scripts are covered by the root MIT license.
